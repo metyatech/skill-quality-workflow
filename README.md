@@ -21,6 +21,12 @@ Provides guidance for:
 npx skills add metyatech/skill-quality-workflow --yes --global
 ```
 
+## Community and Support
+
+- [Contributing](CONTRIBUTING.md) — How to contribute to this project
+- [Security](SECURITY.md) — Security policy and reporting
+- [Changelog](CHANGELOG.md) — Notable changes to this project
+
 ## License
 
-MIT
+MIT - see [LICENSE](LICENSE) for details.

@@ -1,0 +1,33 @@
+{
+  "name": "@metyatech/skill-quality-workflow",
+  "version": "1.0.0",
+  "description": "An Agent Skill for test coverage methodology and defect handling workflows.",
+  "type": "module",
+  "main": "SKILL.md",
+  "scripts": {
+    "lint": "prettier --check . && markdownlint *.md --ignore node_modules --ignore AGENTS.md",
+    "format": "prettier --write .",
+    "compose": "compose-agentsmd --compose",
+    "verify": "npm run lint && npm run compose"
+  },
+  "keywords": [
+    "agent-skill",
+    "quality-workflow",
+    "testing",
+    "qa"
+  ],
+  "author": "metyatech",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/metyatech/skill-quality-workflow.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "compose-agentsmd": "latest",
+    "markdownlint-cli": "latest",
+    "prettier": "latest"
+  }
+}
