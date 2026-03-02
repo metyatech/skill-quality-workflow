@@ -24,8 +24,6 @@ description: Use when writing tests, designing test coverage, handling defect fi
 
 ## Verification evidence procedures
 
-Content extracted from delivery-hard-gates and quality-testing-and-errors rules.
-
 ### AC→evidence mapping format
 
 - Maintain an explicit mapping: `AC -> evidence (tests/commands/manual steps)`.
@@ -43,10 +41,11 @@ Every final response for state-changing work MUST include:
 
 ## CI and commit-hook setup
 
-- CI must run the full suite on PRs and default-branch pushes; require passing status checks for merges. If no CI exists, add one.
+For CI and commit-hook invariants, see the quality-and-delivery rules. This section covers setup procedures.
+
 - Configure required default-branch checks when permitted; otherwise report the limitation.
 - Do not rely on smoke-only or scheduled-only gates.
-- Commit-time automation must run full verify and block commits; before first commit in a session, confirm hooks are installed (install if needed). If impossible, run full verify manually before every commit.
+- If hooks are not installed, install them before the first commit in the session. If impossible, run full verify manually before every commit.
 - Verify scripts must enforce lock-file integrity (manifest/lock drift detection).
 
 ## Environment constraints
@@ -57,6 +56,5 @@ Every final response for state-changing work MUST include:
 
 ## Test practices
 
-- Keep tests deterministic; minimize time/random/external I/O via dependency injection.
 - Heuristic waits require condition-based logic, hard deadlines, diagnostics, and explicit requester approval.
 - Log minimally with diagnostic context; never log secrets/personal data; remove debugging instrumentation before final patch.
