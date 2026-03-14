@@ -1,13 +1,20 @@
 # skill-quality-workflow
 
-An [Agent Skill](https://agentskills.io) for test coverage methodology and defect handling workflows.
+An [Agent Skill](https://agentskills.io) for test coverage methodology and
+defect handling workflows.
 
 ## What it does
 
 Provides guidance for:
 
-- **Test coverage methodology** — what to cover (boundaries, state transitions, integration points), how to structure tests (snapshot/golden tests, test matrices), and how to handle nondeterminism
-- **Feedback loops and root causes** — defect root-cause classification, upstream prevention, and feedback-loop improvement
+- **Test coverage methodology** — what to cover (boundaries, state
+  transitions, integration points), how to structure tests (snapshot/golden
+  tests, test matrices), and how to handle nondeterminism
+- **Feedback loops and root causes** — defect root-cause classification,
+  upstream prevention, and feedback-loop improvement
+- **Verification reporting discipline** — keep detailed AC/evidence tracking
+  internally while defaulting normal user-facing completion reports to concise
+  summaries unless detailed proof is requested
 
 ## When it triggers
 
