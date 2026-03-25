@@ -41,7 +41,7 @@ description: Use when writing tests, designing test coverage, handling defect fi
 
 ## Verification evidence procedures
 
-### AC→evidence mapping format
+### AC->evidence mapping format
 
 - Maintain an explicit mapping: `AC -> evidence (tests/commands/manual steps)`.
 - The mapping may be presented in a compact per-item form (one line per AC
