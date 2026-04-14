@@ -10,6 +10,9 @@ Provides guidance for:
 - **Test coverage methodology** — what to cover (boundaries, state
   transitions, integration points), how to structure tests (snapshot/golden
   tests, test matrices), and how to handle nondeterminism
+- **External contract surface verification** — derive a changed
+  user-visible surface matrix from docs/specs/help/UI/API and
+  require direct evidence for each changed surface item
 - **Feedback loops and root causes** — defect root-cause classification,
   upstream prevention, and feedback-loop improvement
 - **Verification reporting discipline** — keep detailed AC/evidence tracking

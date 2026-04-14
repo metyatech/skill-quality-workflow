@@ -12,6 +12,16 @@ description: Use when writing tests, designing test coverage, handling defect fi
   subsequent-run behavior when relevant). Tests MUST include
   representative concurrency, retry, and recovery cases when
   relevant.
+- For non-trivial changes, the agent MUST enumerate the changed
+  externally visible contract surface before choosing tests. Use
+  the changed docs, specs, CLI help, API descriptions, UI
+  controls, file formats, and user-facing messages as the source
+  of truth for that surface.
+- The agent MUST build a small surface matrix
+  (`surface item × state/outcome`) and cover the highest-risk
+  combinations directly. The agent MUST NOT treat one passing
+  happy-path check as evidence that adjacent documented entry
+  points also work.
 - For deterministic output files, the agent MUST use full-content
   snapshot or golden tests.
 - The agent MUST prefer making nondeterministic failures
@@ -57,6 +67,10 @@ description: Use when writing tests, designing test coverage, handling defect fi
 
 - The agent MUST maintain an explicit mapping of
   `AC -> evidence (tests/commands/manual steps)`.
+- The agent SHOULD maintain a parallel mapping of
+  `changed surface item -> direct evidence` whenever the change
+  adds or alters a user-visible interface such as a command,
+  flag, endpoint, view, or state.
 - The mapping MAY be presented in a compact per-item form (one
   line per AC including evidence and outcome) to reduce verbosity.
 - For non-code changes, the agent MUST run the relevant
@@ -101,6 +115,10 @@ covers setup procedures.
   manual verification in addition to automated tests. When manual
   testing finds issues, the agent MUST add failing tests first,
   then fix.
+- For CLI and API changes, direct contract checks MUST include
+  discoverability surfaces such as help, usage, version, schema,
+  or equivalent documented entry points when those surfaces are
+  part of the delivered contract.
 - If required tests are impractical, the agent MUST document the
   gap, MUST provide a manual verification plan, and MUST get
   explicit approval.
