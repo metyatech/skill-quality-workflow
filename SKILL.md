@@ -5,6 +5,21 @@ description: Use when writing tests, designing test coverage, handling defect fi
 
 # Quality workflow
 
+## Verification gate discipline
+
+Obligation: `quality-and-verification`.
+
+- Use targeted/scoped verification (focused builds, specific test
+  filters) in the inner loop; run the full suite only as the final
+  gate before concluding or the final commit.
+- Long-running gates (pre-commit verify, full suite, CI) are final
+  confirmation, not inner-loop debuggers. Settle each hypothesis
+  against the smallest reproducer (single failing test, targeted
+  build, isolated command) before re-running the full gate.
+- When a test fails after a dependency bump or environment change,
+  first reproduce it against the pre-change state (prior SHA /
+  pre-bump seed) before blaming the change.
+
 ## Test coverage methodology
 
 - Tests MUST cover success, failure, boundary, invalid input, and
