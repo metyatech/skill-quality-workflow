@@ -78,7 +78,7 @@ Obligation: `quality-and-verification`.
 
 ## Verification evidence procedures
 
-### AC→evidence mapping format
+### AC->evidence mapping format
 
 - The agent MUST maintain an explicit mapping of
   `AC -> evidence (tests/commands/manual steps)`.

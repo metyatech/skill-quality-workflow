@@ -24,12 +24,39 @@ Provides guidance for:
 - Writing tests or designing test coverage
 - Handling defect fixes or performing root-cause analysis
 - Creating test matrices or choosing between unit/integration/E2E tests
+- Setting up CI verification or commit hooks
 
 ## Installation
 
 ```bash
 npx skills add metyatech/skill-quality-workflow --yes --global
 ```
+
+## Usage
+
+Once installed, the skill is automatically triggered by the Gemini CLI when relevant tasks are detected. You can also explicitly reference it by asking about "quality workflow" or "test coverage".
+
+## Development
+
+This repository uses `compose-agentsmd` to manage agent rules.
+
+### Prerequisites
+
+- Node.js (Latest LTS recommended)
+- `npm`
+
+### Verification
+
+Run the verification suite to check for linting and formatting issues:
+
+```powershell
+npm run verify
+```
+
+## Compatibility
+
+- **Agent System**: Gemini CLI, standard Agent Skills runtime.
+- **OS**: Cross-platform (Windows, macOS, Linux).
 
 ## License
 
